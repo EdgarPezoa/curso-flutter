@@ -1,0 +1,23 @@
+void main() {
+  final cuadrado = new Cuadrado();
+  cuadrado.lado = 2;
+  print(cuadrado);
+  print("Area es igual a: ${cuadrado.area}");
+}
+
+class Cuadrado{
+  double _lado;
+  //double _area;
+  
+  String toString() => "El lado es: $_lado ";
+  double get area =>_lado * _lado;
+  
+  set lado(double valor){
+    if(valor <= 0){
+        throw("El lado no puede ser menor o igual a 0");
+    }
+    _lado = valor;
+  }
+  
+  
+}

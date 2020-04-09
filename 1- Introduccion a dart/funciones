@@ -1,0 +1,20 @@
+
+        //FUNCIONES
+void main() {
+  //var mensaje = saludar();
+  //  saludar();
+  //String mensaje = saludar("edgar","Hola mundo");
+  String mensaje = saludar(texto:"Hola mundo", nombre:"edgar");
+  String mensaje2 = saludar2(texto:"Hola mundo", nombre:"edgar");
+  print(mensaje);
+  print(mensaje2);
+
+}
+
+String saludar({ String nombre, String texto }){
+  //print('Hola');
+  //return 1;
+  return 'Hola $nombre, $texto';
+}
+
+String saludar2({ String nombre, String texto }) =>'Hola $nombre, $texto';

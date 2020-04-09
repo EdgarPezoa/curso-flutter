@@ -1,0 +1,57 @@
+
+            //CLASES Y CONSTRUCTORES
+void main() {
+  
+  //final spiderman = new Heroe();
+  //spiderman = Heroe(); No se puede debido al final
+  //final spiderman = new Heroe("spiderman", "Telaraña");
+  //final spiderman = new Heroe(nombre:"spiderman", poder:"Telaraña");
+  final spiderman = new Heroe( poder:"Telaraña" );
+  print(spiderman);
+  print(spiderman.nombre);
+  print(spiderman.poder); 
+}
+
+class Heroe{
+  String nombre;
+  String poder;
+  
+//  Heroe({String nombre = 'Nombre por defecto', String poder}){
+//    //Constructor
+//    this.nombre = nombre;
+//    this.poder = poder;
+//  }
+  //Constructor asignativo
+  Heroe({ this.nombre = 'Nombre por defecto', this.poder});
+  
+  //Metodo print por defecto
+  String toString() => "Heroe: $nombre, Poder: $poder";
+  
+}
+
+
+        //TIPOS DE CONSTRUCTORE; API
+import 'dart:convert';
+
+void main() {
+  //final heroe = new Heroe(nombre:"Spiderman", poder:'Telaraña');
+  
+  final rawJson = '{"nombre":"logan", "poder": "regeneracion"}';
+  Map parsedJson = json.decode(rawJson);
+  print(parsedJson);
+  
+  final heroe = new Heroe.fromJson(parsedJson);
+  print(heroe.nombre);
+  print(heroe.poder);
+}
+
+class Heroe{
+  String nombre;
+  String poder;
+  
+  Heroe({ this.nombre = 'Nombre por defecto', this.poder});
+  Heroe.fromJson( Map parsedJson ){
+    nombre = parsedJson['nombre'];
+    poder = parsedJson['poder'];
+  }
+}

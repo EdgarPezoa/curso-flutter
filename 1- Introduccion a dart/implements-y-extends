@@ -1,0 +1,55 @@
+        //IMPLEMENTS
+void main() {
+  final perro = new Perro();
+  perro.emitirSonido();
+  
+  final gato = new Gato();
+  gato.emitirSonido();
+  
+}
+
+abstract class Animal{
+  int _patas;
+  
+  void emitirSonido();
+}
+
+class Perro implements Animal{
+  int _patas;
+  int _colas;
+  void emitirSonido(){
+    print("Guau");
+  }
+}
+
+class Gato implements Animal{
+  int _patas;
+  void emitirSonido(){
+    print("Miau");  
+  }
+}
+
+        //EXTENDS
+void main() {
+  final heroe = new Heroe();
+  heroe.nombre = "Superman";
+  
+  final villano = new Villano();
+  villano.nombre="Luthor";
+  
+}
+
+abstract class Personaje{
+  String nombre;
+  String poder;
+}
+
+class Heroe extends Personaje {
+  int valentia;
+  
+}
+
+class Villano extends Personaje {
+  int maldad;
+  
+}

@@ -1,0 +1,61 @@
+        //Strings y Numeros
+int empleados = 10;
+double pi = 3.14;
+String nombre = "Edgar";
+
+print('$empleados - $pi - $nombre');
+print(nombre[0]);
+print(nombre[nombre.length-1]);
+
+        //BOOLEAN
+bool activado = true;
+activado = !activado;
+
+if( activado ){
+print('El motor esta funcionando');
+}else{
+print('Esta apagado');
+}
+
+        //LISTAS
+List numeros = [1, 2, 3, 4, 5];
+print(numeros);
+numeros.add("hola mundo");
+print(numeros);
+
+List<int> soloNumeros = [1, 2, 3, 4, 5];
+print(soloNumeros);
+//soloNumeros.add("hola mundo");
+print(soloNumeros);
+
+List muchosNumeros = List(10);
+print(muchosNumeros);
+//muchosNumeros.add(3);
+muchosNumeros[0] = 3;
+print(muchosNumeros);
+
+List<List<int>> listaDeLista = [];
+
+        //MAP  
+String propiedad = 'soltero';
+
+Map<String, dynamic> persona = {
+    'nombre'  : 'Carlos',
+    'edad'    :  32,
+    'soltero' : true
+};
+
+print( persona['nombre'] );
+print( persona[propiedad] );
+
+Map<int, String> personas ={
+1: 'Tony',
+2: 'Peter'
+//'10':'Juan'
+};
+print(personas[1]);
+personas.addAll({ 3: 'Edgar' });
+print(personas);
+print(personas[3]);
+
+
